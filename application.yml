@@ -1,0 +1,13 @@
+server:
+  port: 7003  #修改该服务的端口号为7001
+
+
+eureka:
+  instance:
+    hostname: eureka7003.com   #访问eureka服务的主机名
+  client:
+    register-with-eureka: false #声明eureka不能进行自我注册
+    fetch-registry: false       #声明eureka不进行自我查询服务
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+
